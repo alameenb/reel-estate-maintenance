@@ -1,0 +1,7 @@
+{
+  "name": "reel-estate-maintenance",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": { "test:unit": "sfdx-lwc-jest --skipApiVersionCheck" },
+  "devDependencies": { "@salesforce/sfdx-lwc-jest": "5.1.0" }
+}
