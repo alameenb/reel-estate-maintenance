@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+<columns><field>Case$CaseNumber</field></columns><columns><field>Case.Request_Assignments__r$Start__c</field></columns><columns><field>Case.Request_Assignments__r$End__c</field></columns>
+<columns><aggregateTypes>Sum</aggregateTypes><aggregateTypes>Average</aggregateTypes><field>Case.Request_Assignments__r$Duration_Hours__c</field></columns>
+<description>CMP-088. Completed assignment periods by type, assignee and team.</description>
+<filter><criteriaItems><column>Case.Request_Assignments__r$End__c</column><columnToColumn>false</columnToColumn><isUnlocked>true</isUnlocked><operator>notEqual</operator><value></value></criteriaItems></filter><format>Summary</format>
+<groupingsDown><dateGranularity>Day</dateGranularity><field>Case.Request_Assignments__r$Assignment_Type__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+<groupingsDown><dateGranularity>Day</dateGranularity><field>Case.Request_Assignments__r$Assignee_User__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+<groupingsDown><dateGranularity>Day</dateGranularity><field>Case.Request_Assignments__r$Team__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+<name>Resolution Time by Assignment</name><reportType>Case_with_Request_Assignments__c</reportType><scope>organization</scope><showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>true</showSubTotals>
+<timeFrameFilter><dateColumn>Case$CreatedDate</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>
