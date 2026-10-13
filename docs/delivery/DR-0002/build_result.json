@@ -1,0 +1,1083 @@
+{
+  "schema": "build_result.v1",
+  "request_key": "DR-0002",
+  "design_sha256": "8506667de2254251952eb73fbc1dc324212fa81389b4b4a5409a0701c9254919",
+  "design_version": 1,
+  "started_at": "2026-10-13T05:50:00Z",
+  "finished_at": "2026-10-13T07:12:39Z",
+  "runner": "Claude Code (Build agent, run in session)",
+  "model": "claude-opus-5-5",
+  "prompt_version": "1.1.0",
+  "target_org": {
+    "alias": "reel-demo",
+    "name": "IBM (orgfarm-3b22af62d2)",
+    "type": "Developer Edition",
+    "org_id": "00Dak00000qUstDEAS"
+  },
+  "branch": "feature/dr-0002-property-management",
+  "pr": {
+    "number": 1,
+    "url": "https://github.com/alameenb/reel-estate-maintenance/pull/1",
+    "title": "DR-0002 Property Management: maintenance requests, portal and routing",
+    "head_sha": "e8245e5002672ad8842b7f7d48d8ce37d7bbfd93"
+  },
+  "commits": [
+    {
+      "sha": "389c6a7b98a2c3b3d81accef453ec3db31af984e",
+      "message": "chore: Salesforce DX project, metadata generators and PR checks\n\nBuilt from DR-0002 design bundle v1.\n\nStory: N/A\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [],
+      "component_keys": []
+    },
+    {
+      "sha": "bf191f06ce9bb0d0250ebd42b128522cedb687ca",
+      "message": "feat: data model, lifecycle statuses and configurable settings\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-006, US-007, US-008, US-010, US-012, US-020, US-021, US-022, US-026, US-031\nComponent: CMP-001, CMP-002, CMP-003, CMP-004, CMP-011, CMP-013, CMP-020, CMP-021, CMP-022, CMP-024, CMP-025, CMP-033, CMP-034, CMP-035, CMP-036, CMP-037, CMP-038, CMP-039, CMP-040, CMP-041, CMP-042, CMP-043, CMP-044, CMP-045, CMP-065, CMP-077, CMP-078, CMP-079, CMP-080, CMP-081, CMP-082, CMP-083, CMP-084, CMP-089, CMP-090, CMP-100, CMP-115, CMP-116\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-006",
+        "US-007",
+        "US-008",
+        "US-010",
+        "US-012",
+        "US-020",
+        "US-021",
+        "US-022",
+        "US-026",
+        "US-031"
+      ],
+      "component_keys": [
+        "CMP-001",
+        "CMP-002",
+        "CMP-003",
+        "CMP-004",
+        "CMP-011",
+        "CMP-013",
+        "CMP-020",
+        "CMP-021",
+        "CMP-022",
+        "CMP-024",
+        "CMP-025",
+        "CMP-033",
+        "CMP-034",
+        "CMP-035",
+        "CMP-036",
+        "CMP-037",
+        "CMP-038",
+        "CMP-039",
+        "CMP-040",
+        "CMP-041",
+        "CMP-042",
+        "CMP-043",
+        "CMP-044",
+        "CMP-045",
+        "CMP-065",
+        "CMP-077",
+        "CMP-078",
+        "CMP-079",
+        "CMP-080",
+        "CMP-081",
+        "CMP-082",
+        "CMP-083",
+        "CMP-084",
+        "CMP-089",
+        "CMP-090",
+        "CMP-100",
+        "CMP-115",
+        "CMP-116"
+      ]
+    },
+    {
+      "sha": "6fe6dde98ae7c1ffff38534c1c4406a83c7c810b",
+      "message": "feat: Omni-Channel skills-based routing and assignment periods\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-001, US-021, US-032\nComponent: CMP-005, CMP-006, CMP-007, CMP-008, CMP-085\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-001",
+        "US-021",
+        "US-032"
+      ],
+      "component_keys": [
+        "CMP-005",
+        "CMP-006",
+        "CMP-007",
+        "CMP-008",
+        "CMP-085"
+      ]
+    },
+    {
+      "sha": "e108b2e6af4cc02e0e6cd5cdd13a74134529a706",
+      "message": "feat: public maintenance request form with server-side validation\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-010, US-011, US-012, US-023, US-028\nComponent: CMP-047, CMP-048, CMP-051\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-010",
+        "US-011",
+        "US-012",
+        "US-023",
+        "US-028"
+      ],
+      "component_keys": [
+        "CMP-047",
+        "CMP-048",
+        "CMP-051"
+      ]
+    },
+    {
+      "sha": "2443bc792285ca68ffdb592e3e8eefb3cba32e33",
+      "message": "feat: customer email and portal notifications driven by metadata rules\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-005, US-009, US-023, US-024, US-025, US-030\nComponent: CMP-026, CMP-027, CMP-028, CMP-029, CMP-046, CMP-049, CMP-050, CMP-093, CMP-094, CMP-095, CMP-096, CMP-097, CMP-098, CMP-101, CMP-102, CMP-103, CMP-104\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-005",
+        "US-009",
+        "US-023",
+        "US-024",
+        "US-025",
+        "US-030"
+      ],
+      "component_keys": [
+        "CMP-026",
+        "CMP-027",
+        "CMP-028",
+        "CMP-029",
+        "CMP-046",
+        "CMP-049",
+        "CMP-050",
+        "CMP-093",
+        "CMP-094",
+        "CMP-095",
+        "CMP-096",
+        "CMP-097",
+        "CMP-098",
+        "CMP-101",
+        "CMP-102",
+        "CMP-103",
+        "CMP-104"
+      ]
+    },
+    {
+      "sha": "7ab1b75e2fbaf354fd6e24154e1bc496f9762602",
+      "message": "feat: escalation, reminders, information requests, resolution, rating and auto-close\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-008, US-013, US-016, US-017, US-029, US-030, US-031, US-032, US-033\nComponent: CMP-023, CMP-030, CMP-031, CMP-058, CMP-059, CMP-060, CMP-061, CMP-062, CMP-063, CMP-109, CMP-110, CMP-111, CMP-112, CMP-113, CMP-114, CMP-117, CMP-118, CMP-123\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-008",
+        "US-013",
+        "US-016",
+        "US-017",
+        "US-029",
+        "US-030",
+        "US-031",
+        "US-032",
+        "US-033"
+      ],
+      "component_keys": [
+        "CMP-023",
+        "CMP-030",
+        "CMP-031",
+        "CMP-058",
+        "CMP-059",
+        "CMP-060",
+        "CMP-061",
+        "CMP-062",
+        "CMP-063",
+        "CMP-109",
+        "CMP-110",
+        "CMP-111",
+        "CMP-112",
+        "CMP-113",
+        "CMP-114",
+        "CMP-117",
+        "CMP-118",
+        "CMP-123"
+      ]
+    },
+    {
+      "sha": "528ebc7ac4ef6de10a5cf8f85f9bfbc7a2898e60",
+      "message": "feat: least-privilege permission sets, team groups and sharing\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-018, US-034, US-035, US-036\nComponent: CMP-016, CMP-017, CMP-018, CMP-032, CMP-053, CMP-055, CMP-066, CMP-067, CMP-068, CMP-092, CMP-119, CMP-120, CMP-126, CMP-127, CMP-128\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-018",
+        "US-034",
+        "US-035",
+        "US-036"
+      ],
+      "component_keys": [
+        "CMP-016",
+        "CMP-017",
+        "CMP-018",
+        "CMP-032",
+        "CMP-053",
+        "CMP-055",
+        "CMP-066",
+        "CMP-067",
+        "CMP-068",
+        "CMP-092",
+        "CMP-119",
+        "CMP-120",
+        "CMP-126",
+        "CMP-127",
+        "CMP-128"
+      ]
+    },
+    {
+      "sha": "cc3f881fb9456f88729af305b170e2e212b556a7",
+      "message": "feat: service console app, record page, path and list views\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-002, US-003, US-014, US-018, US-020, US-026, US-027, US-028\nComponent: CMP-010, CMP-012, CMP-014, CMP-015, CMP-054, CMP-056, CMP-069, CMP-070\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-002",
+        "US-003",
+        "US-014",
+        "US-018",
+        "US-020",
+        "US-026",
+        "US-027",
+        "US-028"
+      ],
+      "component_keys": [
+        "CMP-010",
+        "CMP-012",
+        "CMP-014",
+        "CMP-015",
+        "CMP-054",
+        "CMP-056",
+        "CMP-069",
+        "CMP-070"
+      ]
+    },
+    {
+      "sha": "0fa57a40831845a3166dad89a669520d761cd527",
+      "message": "feat: manager reports and workload dashboard\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-019, US-020, US-021, US-022\nComponent: CMP-071, CMP-072, CMP-073, CMP-074, CMP-075, CMP-087, CMP-088, CMP-091\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-019",
+        "US-020",
+        "US-021",
+        "US-022"
+      ],
+      "component_keys": [
+        "CMP-071",
+        "CMP-072",
+        "CMP-073",
+        "CMP-074",
+        "CMP-075",
+        "CMP-087",
+        "CMP-088",
+        "CMP-091"
+      ]
+    },
+    {
+      "sha": "8cae1cc9ec55976329bcf21d98e6afcbcea54769",
+      "message": "feat: customer portal with public intake page, My Requests and rating\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-004, US-014, US-015, US-034, US-035\nComponent: CMP-019, CMP-052, CMP-057, CMP-125\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-004",
+        "US-014",
+        "US-015",
+        "US-034",
+        "US-035"
+      ],
+      "component_keys": [
+        "CMP-019",
+        "CMP-052",
+        "CMP-057",
+        "CMP-125"
+      ]
+    },
+    {
+      "sha": "e917c5fad74b056968f5f6d73ccf9f167f07c50a",
+      "message": "test: Apex test suite (79 tests, 91% coverage) and shared test data factory\n\nBuilt from DR-0002 design bundle v1.\n\nStory: US-001, US-003, US-005, US-010, US-011, US-016, US-018, US-020, US-021, US-022, US-023, US-024, US-025, US-026, US-027, US-028, US-029, US-030, US-031, US-032, US-033, US-034, US-035, US-036\nComponent: CMP-009, CMP-064, CMP-076, CMP-086, CMP-099, CMP-105, CMP-106, CMP-107, CMP-108, CMP-121, CMP-122, CMP-124, CMP-129, CMP-130\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [
+        "US-001",
+        "US-003",
+        "US-005",
+        "US-010",
+        "US-011",
+        "US-016",
+        "US-018",
+        "US-020",
+        "US-021",
+        "US-022",
+        "US-023",
+        "US-024",
+        "US-025",
+        "US-026",
+        "US-027",
+        "US-028",
+        "US-029",
+        "US-030",
+        "US-031",
+        "US-032",
+        "US-033",
+        "US-034",
+        "US-035",
+        "US-036"
+      ],
+      "component_keys": [
+        "CMP-009",
+        "CMP-064",
+        "CMP-076",
+        "CMP-086",
+        "CMP-099",
+        "CMP-105",
+        "CMP-106",
+        "CMP-107",
+        "CMP-108",
+        "CMP-121",
+        "CMP-122",
+        "CMP-124",
+        "CMP-129",
+        "CMP-130"
+      ]
+    },
+    {
+      "sha": "7e193fd61739452dedc343841b309c33c3a33634",
+      "message": "chore: demo-org configuration, demo data and post-deploy sharing verification\n\nBuilt from DR-0002 design bundle v1.\n\nStory: N/A\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [],
+      "component_keys": []
+    },
+    {
+      "sha": "cf45ec536a5b83f7c5c76a903e45fdfd6250de8d",
+      "message": "docs: DR-0002 design snapshot, build report, deviations and traceability\n\nBuilt from DR-0002 design bundle v1.\n\nStory: N/A\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [],
+      "component_keys": []
+    },
+    {
+      "sha": "e8245e5002672ad8842b7f7d48d8ce37d7bbfd93",
+      "message": "docs: record the Gate 2 approval the build was made from\n\nStory: N/A\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_01Dtk3aH7Sr9AipQ35WX4Qd9",
+      "story_keys": [],
+      "component_keys": []
+    }
+  ],
+  "tests": {
+    "apex": {
+      "ran": 79,
+      "passed": 79,
+      "failed": 0,
+      "coverage": 91
+    },
+    "lwc": {
+      "ran": 5,
+      "passed": 5,
+      "failed": 0
+    }
+  },
+  "component_status": [
+    {
+      "component_key": "CMP-002",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-011",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-003",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-005",
+      "status": "Built",
+      "note": "Omni-Channel utility (widget) still to be added to the console app."
+    },
+    {
+      "component_key": "CMP-001",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-013",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-009",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-004",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-006",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-007",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-008",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-010",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-012",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-015",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-014",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-016",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-017",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-019",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-018",
+      "status": "Built",
+      "note": "Edit access (design: Read) so customers can save their rating."
+    },
+    {
+      "component_key": "CMP-020",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-021",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-022",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-023",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-024",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-025",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-026",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-027",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-028",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-029",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-030",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-031",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-032",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-033",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-034",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-035",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-036",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-037",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-038",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-039",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-040",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-041",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-042",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-043",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-044",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-045",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-046",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-047",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-048",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-049",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-050",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-051",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-053",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-052",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-054",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-055",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-056",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-057",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-058",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-059",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-060",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-061",
+      "status": "Built",
+      "note": "Visibility filter not set; the flow refuses unless status is Awaiting Customer Information."
+    },
+    {
+      "component_key": "CMP-063",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-062",
+      "status": "Built",
+      "note": "Radio-button choices instead of data tables."
+    },
+    {
+      "component_key": "CMP-064",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-065",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-066",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-067",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-068",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-069",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-070",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-071",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-072",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-073",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-074",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-075",
+      "status": "Partially built",
+      "note": "Bar charts and overdue metric built; top-20 overdue table not included."
+    },
+    {
+      "component_key": "CMP-076",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-077",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-078",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-079",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-080",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-081",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-082",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-083",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-084",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-085",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-086",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-087",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-088",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-089",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-090",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-091",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-092",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-093",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-094",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-095",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-096",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-097",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-098",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-099",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-100",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-101",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-102",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-103",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-104",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-105",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-106",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-107",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-108",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-115",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-116",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-109",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-110",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-111",
+      "status": "Built",
+      "note": "Visibility filter not set."
+    },
+    {
+      "component_key": "CMP-112",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-113",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-114",
+      "status": "Built",
+      "note": "Visibility filter not set."
+    },
+    {
+      "component_key": "CMP-119",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-117",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-118",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-120",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-121",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-122",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-123",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-125",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-126",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-127",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-128",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-129",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-124",
+      "status": "Built",
+      "note": ""
+    },
+    {
+      "component_key": "CMP-130",
+      "status": "Built",
+      "note": ""
+    }
+  ],
+  "deviations": [
+    {
+      "component_key": "CMP-026",
+      "reason": "Classic HTML email templates merged in memory instead of Lightning templates (bulk-safe; renderStoredEmailTemplate costs queries per email).",
+      "proposed_design_change": "Accept; revisit if the business needs Lightning template editing."
+    },
+    {
+      "component_key": "CMP-085",
+      "reason": "RequestAssignmentService runs without sharing (audit data written for any user from the trigger).",
+      "proposed_design_change": "Accept as documented exception."
+    },
+    {
+      "component_key": "CMP-028",
+      "reason": "Shared MaintenanceMessaging helper reads customer contact details in system mode; reminder flow uses an invocable action instead of Send Email elements.",
+      "proposed_design_change": "Accept."
+    },
+    {
+      "component_key": "CMP-006",
+      "reason": "Guest/portal-created requests are routed through the Maintenance_Routing__e platform event (Automated Process user), because those licences cannot access Omni-Channel objects.",
+      "proposed_design_change": "Add Maintenance_Routing__e and MaintenanceRoutingTrigger to the design."
+    },
+    {
+      "component_key": "CMP-018",
+      "reason": "Sharing set grants Edit, not Read, so customers can save their rating (CMP-117/119).",
+      "proposed_design_change": "Update CMP-018 access to Edit; field security limits changes to the rating."
+    },
+    {
+      "component_key": "CMP-030",
+      "reason": "Record type checked by Id lookup instead of an entry formula (cross-object formulas are not evaluated on create in before-save flows).",
+      "proposed_design_change": "Accept."
+    },
+    {
+      "component_key": "CMP-062",
+      "reason": "Radio-button choice lists instead of data tables; postcode-only property search.",
+      "proposed_design_change": "Accept for MVP."
+    },
+    {
+      "component_key": "CMP-061",
+      "reason": "Quick-action visibility filters not set (also CMP-111, CMP-114); flows refuse with a clear message.",
+      "proposed_design_change": "Add Dynamic Actions visibility in a follow-up."
+    },
+    {
+      "component_key": "CMP-130",
+      "reason": "Team and supervisor access verified by scripts/apex/verify-sharing.apex on real records (36/36), because this org calculates criteria-based shares asynchronously (also CMP-076).",
+      "proposed_design_change": "Accept; run the script after every deployment."
+    },
+    {
+      "component_key": "CMP-075",
+      "reason": "Dashboard overdue table component not included.",
+      "proposed_design_change": "Add in a follow-up."
+    }
+  ],
+  "reviewer_focus": [
+    "Documented without-sharing exceptions: MaintenanceRequestIntakeService (guest intake), RequestAssignmentService, MaintenanceMessaging contact reads",
+    "Platform-event routing for guest and portal requests (Maintenance_Routing__e)",
+    "Sharing set Edit access for portal rating",
+    "Demo values for categories and teams (business TBC)"
+  ],
+  "verification": [
+    {
+      "name": "Deploy",
+      "result": "Succeeded: 190 components plus the Experience Cloud site"
+    },
+    {
+      "name": "Apex tests",
+      "result": "79/79 passed, 91% org-wide coverage"
+    },
+    {
+      "name": "LWC Jest",
+      "result": "5/5 passed"
+    },
+    {
+      "name": "Rule-based sharing on real records",
+      "result": "36/36 checks passed (scripts/apex/verify-sharing.apex)"
+    },
+    {
+      "name": "Customer portal",
+      "result": "Live at https://orgfarm-3b22af62d2-dev-ed.develop.my.site.com/maintenance"
+    }
+  ]
+}
