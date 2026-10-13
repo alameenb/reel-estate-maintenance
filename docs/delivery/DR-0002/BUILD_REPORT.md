@@ -1,6 +1,6 @@
 # DR-0002 · Property Management: build report
 
-Built by Claude (acting as the pipeline's Build agent) from design bundle **v1**, deployed to the Developer Edition org `orgfarm-3b22af62d2-dev-ed`, and raised for Gate 3 review. The design was at Gate 2 (*Under Review*) when built; the Technical Architect's Gate 2 and Gate 3 decisions both still apply.
+Built by Claude (acting as the pipeline's Build agent) from design bundle **v1**, approved at Gate 2 on 13 Oct 2026 16:47 AEDT (sha256 `8506667de225…`). Deployed to the Developer Edition org `orgfarm-3b22af62d2-dev-ed` and raised for Gate 3 review.
 
 ## Result
 
