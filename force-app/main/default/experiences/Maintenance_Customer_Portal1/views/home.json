@@ -1,0 +1,142 @@
+{
+  "appPageId": "af757c3a-8203-43a2-84f6-396296cb5bac",
+  "componentName": "siteforce:sldsTwoCol84SidebarFeaturedLayout",
+  "dataProviders": [],
+  "id": "35eb0af2-d908-43c1-9177-19d6043215ed",
+  "label": "Home",
+  "regions": [
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "richTextValue": "<h1 style=\"font-size:28px\">Your maintenance requests</h1><p>Track progress, reply to our team and rate completed work.</p>"
+          },
+          "componentName": "forceCommunity:richTextInline",
+          "id": "0f5629e4-366d-5b6d-8024-3abac7615993",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "3d51d5c1-e16a-4517-8de1-f54853620437",
+      "regionName": "header",
+      "type": "region"
+    },
+    {
+      "components": [],
+      "id": "78579ab6-ce7c-45d2-a89d-0ebd7076b1dc",
+      "regionName": "featured",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "enableInlineEdit": false,
+            "filterName": "Portal_Maintenance_Requests",
+            "layout": "FULL",
+            "pageSize": 25,
+            "scope": "Case",
+            "showActionBar": false,
+            "showChartsPanel": false,
+            "showDisplay": "showall",
+            "showFilterPanel": false,
+            "showImageIcon": true,
+            "showManualRefreshButton": true,
+            "showObjectName": true,
+            "showPinnedList": false,
+            "showSearchBar": true
+          },
+          "componentName": "forceCommunity:objectHome",
+          "id": "e0afb05b-6a05-5fe8-8012-f07c83cfb0e5",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "d4fd4561-9f9a-4546-a27c-6446b945d09c",
+      "regionName": "content",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "richTextValue": "<h2>Something need fixing?</h2><p><a href=\"/maintenance/s/request-maintenance\">Submit a new maintenance request</a></p>"
+          },
+          "componentName": "forceCommunity:richTextInline",
+          "id": "132bc193-885c-507f-8eec-51f635acb879",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "ed001207-3637-4dfc-9df6-3eba2d79a948",
+      "regionName": "sidebar",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "askCommunityLabel": "Ask a Question",
+            "buttonBgColor": "",
+            "buttonBgHoverColor": "",
+            "buttonBorderColor": "",
+            "buttonRadius": 0,
+            "buttonTextColor": "",
+            "buttonTextHoverColor": "",
+            "buttonTwoBgColor": "",
+            "buttonTwoBgHoverColor": "",
+            "buttonTwoBorderColor": "",
+            "buttonTwoRadius": 0,
+            "buttonTwoTextColor": "",
+            "buttonTwoTextHoverColor": "",
+            "confirmationMessage": "Got it!",
+            "contactSupportLabel": "Contact Support",
+            "followUpPromptLabel": "Can we close your question?",
+            "headerLabel": "Don't see what you're looking for?",
+            "isAskFollowPromptEnabled": true,
+            "isIncludeArticlesEnabled": false,
+            "isIncludeDiscussionsEnabled": true,
+            "isInitialSatisfactionPromptEnabled": true,
+            "isPublisherDeflectionEnabled": true,
+            "maxSuggestions": 5,
+            "satisfactionPromptLabel": "Did we help to answer your question?",
+            "showDetails": false,
+            "showTopics": true
+          },
+          "componentName": "siteforce:napiliFooter",
+          "id": "97a2498d-3c57-46b8-816f-325d43c890d1",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "71b861a4-5f46-4f60-8742-e7b6f49c3d77",
+      "regionName": "footer",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "customHeadTags": "",
+            "description": "",
+            "title": "Home"
+          },
+          "componentName": "forceCommunity:seoAssistant",
+          "id": "3424bb62-2a17-42f4-bd95-d15a7b2b46d1",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "500f61d5-9ec8-4c8e-aa3c-fe6da7fff954",
+      "regionName": "sfdcHiddenRegion",
+      "type": "region"
+    }
+  ],
+  "themeLayoutType": "Inner",
+  "type": "view",
+  "viewType": "home"
+}

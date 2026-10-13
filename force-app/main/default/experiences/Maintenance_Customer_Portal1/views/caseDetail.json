@@ -1,0 +1,88 @@
+{
+  "appPageId": "af757c3a-8203-43a2-84f6-396296cb5bac",
+  "componentName": "siteforce:sldsOneColLayout",
+  "dataProviders": [],
+  "id": "9b5d0d13-1563-4957-a212-307f35368252",
+  "label": "Case Detail",
+  "regions": [
+    {
+      "id": "d7f5e29e-b4dc-4b3e-b1d1-f1f44cf252bf",
+      "regionName": "header",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "recordId": "{!recordId}"
+          },
+          "componentName": "forceCommunity:recordHeadline",
+          "id": "e02b0d2e-2c36-4406-8855-386f34f4e250",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        },
+        {
+          "componentAttributes": {
+            "flowArguments": "[{\"label\": \"recordId\", \"dataType\": \"String\", \"supportsRecordId\": true, \"value\": \"{!recordId}\"}]",
+            "flowName": "Maintenance_Rate_Request",
+            "flowLayout": "oneColumn"
+          },
+          "componentName": "forceCommunity:flowCommunity",
+          "id": "3b210527-80c7-5140-81f8-23f088cb6277",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        },
+        {
+          "componentAttributes": {
+            "detailsTabLabel": "Details",
+            "discussionsTabLabel": "Feed",
+            "recordId": "{!recordId}",
+            "relatedTabLabel": "Related",
+            "showLegacyActivityComposer": false,
+            "tab1Type": "details",
+            "tab2Type": "related",
+            "tab3Type": "chatter",
+            "tab4Type": "none",
+            "timelineTabLabel": "Activity"
+          },
+          "componentName": "forceCommunity:recordHomeTabs",
+          "id": "7c428648-c67a-4dc5-93e0-32dbf47a2878",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "9f61d176-8eec-4686-8241-f196ff581fba",
+      "regionName": "content",
+      "type": "region"
+    },
+    {
+      "id": "1d555f76-d43e-4b9e-9a04-a5ab5c4fdba6",
+      "regionName": "footer",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "customHeadTags": "",
+            "description": "",
+            "title": "{!Record._Object}: {!Record._Title}"
+          },
+          "componentName": "forceCommunity:seoAssistant",
+          "id": "d38f17ab-c7ea-4be0-8b02-24f13e43c4dd",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "5ce5a338-99ee-4505-8b21-6fd7147e0d77",
+      "regionName": "sfdcHiddenRegion",
+      "type": "region"
+    }
+  ],
+  "themeLayoutType": "Inner",
+  "type": "view",
+  "viewType": "detail-500"
+}

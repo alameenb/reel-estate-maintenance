@@ -1,0 +1,56 @@
+{
+  "appPageId": "af757c3a-8203-43a2-84f6-396296cb5bac",
+  "componentName": "siteforce:sldsOneColLayout",
+  "dataProviders": [],
+  "id": "a0ab195a-3b44-581d-ba3c-18c914be8766",
+  "label": "Request Maintenance",
+  "regions": [
+    {
+      "id": "d7bcde4c-b677-5af4-b2ef-a65af58df519",
+      "regionName": "header",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {},
+          "componentName": "c:maintenanceRequestIntake",
+          "id": "6db50855-1303-5d19-b316-b03186bc1f36",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "727f828e-d6cf-52d9-bdab-5528b67618b8",
+      "regionName": "content",
+      "type": "region"
+    },
+    {
+      "id": "f36a3b94-8fb9-542f-b488-d36e18c4905d",
+      "regionName": "footer",
+      "type": "region"
+    },
+    {
+      "components": [
+        {
+          "componentAttributes": {
+            "customHeadTags": "",
+            "description": "Submit a maintenance request to Reel Estate",
+            "title": "Request Maintenance"
+          },
+          "componentName": "forceCommunity:seoAssistant",
+          "id": "fb8aa506-479a-5180-a265-ae1372dea57e",
+          "renderPriority": "NEUTRAL",
+          "renditionMap": {},
+          "type": "component"
+        }
+      ],
+      "id": "23fb97ee-7b06-5061-9082-5a98bc5af4b0",
+      "regionName": "sfdcHiddenRegion",
+      "type": "region"
+    }
+  ],
+  "themeLayoutType": "Inner",
+  "type": "view",
+  "viewType": "custom-request-maintenance"
+}
