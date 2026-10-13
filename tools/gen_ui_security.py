@@ -140,6 +140,7 @@ w("flexipages/Maintenance_Request_Record_Page.flexipage-meta.xml", f"""<FlexiPag
 
 # ---------------- Omni-Channel (CMP-005)
 w("settings/OmniChannel.settings-meta.xml", f"<OmniChannelSettings {NS}><enableOmniChannel>true</enableOmniChannel><enableOmniSkillsRouting>true</enableOmniSkillsRouting></OmniChannelSettings>")
+w("settings/PathAssistant.settings-meta.xml", f"<PathAssistantSettings {NS}><pathAssistantEnabled>true</pathAssistantEnabled></PathAssistantSettings>")
 w("serviceChannels/Maintenance_Request_Case.serviceChannel-meta.xml", f"<ServiceChannel {NS}><label>Maintenance Request Case</label><relatedEntityType>Case</relatedEntityType></ServiceChannel>")
 w("servicePresenceStatuses/Available_Maintenance_Requests.servicePresenceStatus-meta.xml", f"<ServicePresenceStatus {NS}><channels><channel>Maintenance_Request_Case</channel></channels><label>Available - Maintenance Requests</label></ServicePresenceStatus>")
 w("presenceUserConfigs/CSR_Presence.presenceUserConfig-meta.xml", f"<PresenceUserConfig {NS}><capacity>5</capacity><enableAutoAccept>false</enableAutoAccept><enableDecline>true</enableDecline><enableDeclineReason>false</enableDeclineReason><enableDisconnectSound>false</enableDisconnectSound><enableRequestSound>true</enableRequestSound><label>CSR Presence</label></PresenceUserConfig>")
@@ -161,6 +162,7 @@ w("applications/Reel_Estate_Maintenance.app-meta.xml", f"""<CustomApplication {N
 <description>Service console for Reel Estate maintenance requests.</description>
 <formFactors>Large</formFactors><isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled><isNavPersonalizationDisabled>false</isNavPersonalizationDisabled><isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
 <label>Reel Estate Maintenance</label><navType>Console</navType>
+{''.join(f'<profileActionOverrides><actionName>View</actionName><content>Maintenance_Request_Record_Page</content><formFactor>Large</formFactor><pageOrSobjectType>Case</pageOrSobjectType><recordType>Case.Maintenance_Request</recordType><type>Flexipage</type><profile>{pr}</profile></profileActionOverrides>' for pr in ['Admin','Standard'])}
 {''.join(f'<tabs>{t}</tabs>' for t in tabs)}
 <uiType>Lightning</uiType>
 <workspaceConfig>{''.join(f'<mappings><tab>{t}</tab></mappings>' for t in tabs)}</workspaceConfig>
@@ -184,10 +186,10 @@ report("Open_Requests_by_Representative","Open Requests by Representative",[("CA
        [RTF,OPEN],"Summary","OWNER",desc="CMP-072. Open requests grouped by current owner.")
 report("Open_Requests_by_Maintenance_Team","Open Requests by Maintenance Team",[("CASE_NUMBER",None),("SUBJECT",None),("STATUS",None),("OWNER",None),("CREATED_DATEONLY",None)],
        [RTF,OPEN,crit("Case.Maintenance_Team__c","notEqual","")],"Summary","Case.Maintenance_Team__c",desc="CMP-073. Open requests grouped by maintenance team.")
-report("Overdue_Maintenance_Requests","Overdue Maintenance Requests",[("CASE_NUMBER",None),("SUBJECT",None),("STATUS",None),("Case.Issue_Category__c",None),("OWNER",None),("Case.Maintenance_Team__c",None),("CREATED_DATEONLY",None),("Case.Escalation_Due__c",None),("Case.Is_Escalated__c",None)],
-       [RTF,crit("Case.Is_Overdue__c","equals","1")],sort=("Case.Escalation_Due__c","Asc"),desc="CMP-074. Unresolved more than 5 days after submission.")
-report("Customer_Satisfaction_Ratings","Customer Satisfaction Ratings",[("CASE_NUMBER",None),("SUBJECT",None),("CONTACT.NAME",None),("OWNER",None),("STATUS",None),("CLOSED_DATEONLY",None),("Case.Satisfaction_Rating__c","Average")],
-       [RTF,crit("Case.Satisfaction_Rating__c","notEqual","")],sort=("CLOSED_DATEONLY","Desc"),desc="CMP-091. Rated requests with average rating.")
+report("Overdue_Maintenance_Requests","Overdue Maintenance Requests",[("CASE_NUMBER",None),("SUBJECT",None),("STATUS",None),("Case.Issue_Category__c",None),("OWNER",None),("CREATED_DATEONLY",None),("Case.Escalation_Due__c",None),("Case.Is_Escalated__c",None)],
+       [RTF,crit("Case.Is_Overdue__c","equals","1")],"Summary","Case.Maintenance_Team__c",sort=("Case.Escalation_Due__c","Asc"),desc="CMP-074. Unresolved more than 5 days after submission, grouped by team (summary so the dashboard metric can use it).")
+report("Customer_Satisfaction_Ratings","Customer Satisfaction Ratings",[("CASE_NUMBER",None),("SUBJECT",None),("CONTACT.NAME",None),("STATUS",None),("CLOSED_DATEONLY",None),("Case.Satisfaction_Rating__c","Average")],
+       [RTF,crit("Case.Satisfaction_Rating__c","notEqual","")],"Summary","OWNER",sort=("CLOSED_DATEONLY","Desc"),desc="CMP-091. Rated requests with average rating, grouped by representative.")
 w("reportTypes/Case_with_Request_Assignments.reportType-meta.xml", f"""<ReportType {NS}><baseObject>Case</baseObject><category>cases</category><deployed>true</deployed><description>CMP-087. Cases with their assignment periods.</description>
 <join><outerJoin>false</outerJoin><relationship>Request_Assignments__r</relationship></join><label>Cases with Request Assignments</label>
 <sections>{''.join(f'<columns><checkedByDefault>true</checkedByDefault><field>{f}</field><table>Case</table></columns>' for f in ['CaseNumber','Subject','Status','ClosedDate','CreatedDate'])}<masterLabel>Cases</masterLabel></sections>
@@ -205,14 +207,17 @@ w("reports/Maintenance_Management_Reports/Resolution_Time_by_Assignment.report-m
 <name>Resolution Time by Assignment</name><reportType>Case_with_Request_Assignments__c</reportType><scope>organization</scope><showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>true</showSubTotals>
 <timeFrameFilter><dateColumn>Case$CreatedDate</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
 </Report>""")
-def dcomp(ctype, header, report, col, row, colspan=6, rowspan=8, extra=""):
-    return f"""<dashboardGridComponents><colSpan>{colspan}</colSpan><columnIndex>{col}</columnIndex><dashboardComponent><autoselectColumnsFromReport>true</autoselectColumnsFromReport>{extra}<componentType>{ctype}</componentType><displayUnits>Auto</displayUnits><header>{esc(header)}</header>{"<indicatorBreakpoint1>5</indicatorBreakpoint1><indicatorBreakpoint2>15</indicatorBreakpoint2><indicatorHighColor>#C23934</indicatorHighColor><indicatorLowColor>#54C254</indicatorLowColor><indicatorMiddleColor>#FFB75D</indicatorMiddleColor>" if ctype=="Metric" else ""}<report>Maintenance_Management_Reports/{report}</report>{"<sortBy>RowValueDescending</sortBy>" if ctype=="Bar" else ""}</dashboardComponent><rowIndex>{row}</rowIndex><rowSpan>{rowspan}</rowSpan></dashboardGridComponents>"""
+def dcomp(ctype, header, report, col, row, colspan=6, rowspan=8, extra="", auto=True, bands=("5","15","#C23934","#54C254")):
+    ind = f"<indicatorBreakpoint1>{bands[0]}</indicatorBreakpoint1><indicatorBreakpoint2>{bands[1]}</indicatorBreakpoint2><indicatorHighColor>{bands[2]}</indicatorHighColor><indicatorLowColor>{bands[3]}</indicatorLowColor><indicatorMiddleColor>#FFB75D</indicatorMiddleColor>"
+    return f"""<dashboardGridComponents><colSpan>{colspan}</colSpan><columnIndex>{col}</columnIndex><dashboardComponent><autoselectColumnsFromReport>{"true" if auto else "false"}</autoselectColumnsFromReport>{extra}<componentType>{ctype}</componentType><displayUnits>Auto</displayUnits><header>{esc(header)}</header>{ind if ctype=="Metric" else ""}<report>Maintenance_Management_Reports/{report}</report>{"<sortBy>RowValueDescending</sortBy>" if ctype=="Bar" else ""}</dashboardComponent><rowIndex>{row}</rowIndex><rowSpan>{rowspan}</rowSpan></dashboardGridComponents>"""
 w("dashboards/Maintenance_Management_Dashboards/Maintenance_Manager_Workload.dashboard-meta.xml", f"""<Dashboard {NS}>
 <backgroundEndColor>#FFFFFF</backgroundEndColor><backgroundFadeDirection>Diagonal</backgroundFadeDirection><backgroundStartColor>#FFFFFF</backgroundStartColor><chartTheme>light</chartTheme><colorPalette>unity</colorPalette>
 <dashboardGridLayout>
 {dcomp("Bar","Open requests by representative","Open_Requests_by_Representative",0,0,extra="<chartAxisRange>Auto</chartAxisRange>")}
 {dcomp("Bar","Open requests by maintenance team","Open_Requests_by_Maintenance_Team",6,0,extra="<chartAxisRange>Auto</chartAxisRange>")}
 {dcomp("Metric","Overdue requests","Overdue_Maintenance_Requests",0,8,4,4)}
+{dcomp("Metric","Average satisfaction rating (1-5)","Customer_Satisfaction_Ratings",4,8,4,4,extra="<chartSummary><aggregate>Average</aggregate><axisBinding>y</axisBinding><column>Case.Satisfaction_Rating__c</column></chartSummary>",auto=False,bands=("2.5","3.5","#54C254","#C23934"))}
+{dcomp("Bar","Overdue requests by team","Overdue_Maintenance_Requests",8,8,4,4,extra="<chartAxisRange>Auto</chartAxisRange>")}
 <numberOfColumns>12</numberOfColumns><rowHeight>36</rowHeight></dashboardGridLayout>
 <dashboardType>LoggedInUser</dashboardType><isGridLayout>true</isGridLayout><textColor>#000000</textColor><title>Maintenance Manager Workload</title><titleColor>#000000</titleColor><titleSize>12</titleSize>
 </Dashboard>""")
