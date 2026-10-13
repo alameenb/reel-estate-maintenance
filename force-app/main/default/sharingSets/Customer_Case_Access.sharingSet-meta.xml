@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMappings><accessLevel>Edit</accessLevel><object>Case</object><objectField>Contact</objectField><userField>Contact</userField></accessMappings>
+    <description>CMP-018. Portal customers see their own maintenance requests (ContactId = their contact). Edit is needed for the rating flow; field access limits what they can change.</description>
+    <name>Customer Case Access</name>
+    <profiles>customer community user</profiles>
+    <profiles>customer community login user</profiles>
+</SharingSet>

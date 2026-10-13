@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile xmlns="http://soap.sforce.com/2006/04/metadata"><custom>false</custom>
+<layoutAssignments><layout>Case-Maintenance Request Layout</layout><recordType>Case.Maintenance_Request</recordType></layoutAssignments>
+<layoutAssignments><layout>Property__c-Property Layout</layout></layoutAssignments>
+<layoutAssignments><layout>Property_Customer__c-Property Customer Layout</layout></layoutAssignments>
+<layoutAssignments><layout>Request_Assignment__c-Request Assignment Layout</layout></layoutAssignments>
+<recordTypeVisibilities><default>true</default><recordType>Case.Maintenance_Request</recordType><visible>true</visible></recordTypeVisibilities>
+</Profile>

@@ -1,0 +1,1325 @@
+{
+ "assumptions": [
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-022",
+    "REQ-024",
+    "REQ-032"
+   ],
+   "key": "ASM-001",
+   "text": "'Customers' means both residential property owners and tenants, and both may submit requests and use the portal."
+  },
+  {
+   "affects": [
+    "REQ-003",
+    "REQ-004",
+    "REQ-009",
+    "REQ-010",
+    "REQ-011",
+    "REQ-013"
+   ],
+   "key": "ASM-002",
+   "text": "'Representative' in the stage-management, reminder and resolution paragraphs means the customer service representative assigned to the request."
+  },
+  {
+   "affects": [
+    "REQ-010"
+   ],
+   "key": "ASM-003",
+   "text": "'Internal notes' are visible only to company employees, never to customers."
+  },
+  {
+   "affects": [
+    "REQ-009",
+    "REQ-027"
+   ],
+   "key": "ASM-004",
+   "text": "The listed stages are the initial status set. The phrase 'such as' and the configurability requirement suggest the list can change."
+  },
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-032"
+   ],
+   "key": "ASM-005",
+   "text": "The online website form is the only intake channel for new requests. The portal is used to track and follow up on existing requests."
+  },
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-002",
+    "REQ-003",
+    "REQ-004",
+    "REQ-005",
+    "REQ-006",
+    "REQ-007",
+    "REQ-008",
+    "REQ-009",
+    "REQ-010",
+    "REQ-011",
+    "REQ-012",
+    "REQ-013",
+    "REQ-014",
+    "REQ-015",
+    "REQ-016",
+    "REQ-017",
+    "REQ-018",
+    "REQ-019",
+    "REQ-020",
+    "REQ-021",
+    "REQ-022",
+    "REQ-023",
+    "REQ-024",
+    "REQ-025",
+    "REQ-026",
+    "REQ-027",
+    "REQ-028",
+    "REQ-029",
+    "REQ-030",
+    "REQ-031",
+    "REQ-032"
+   ],
+   "key": "ASM-006",
+   "text": "All priorities are 'Unstated'. The source uses 'should' throughout and gives no MoSCoW or relative priority, and feedback has not supplied any."
+  },
+  {
+   "affects": [
+    "REQ-012",
+    "REQ-018",
+    "REQ-028"
+   ],
+   "key": "ASM-007",
+   "text": "The 5-day escalation timeframe also defines when a request is overdue for managers."
+  },
+  {
+   "affects": [
+    "REQ-012",
+    "REQ-018",
+    "REQ-028"
+   ],
+   "key": "ASM-008",
+   "text": "The 5 days are calendar days, measured from the time the request is submitted. 'Unresolved' means the request has not yet reached Resolved."
+  },
+  {
+   "affects": [
+    "REQ-012",
+    "REQ-028"
+   ],
+   "key": "ASM-009",
+   "text": "'Escalate request to a specific escalation team' means the request is assigned to that single designated team, not merely notified to it. This replaces the source's 'escalated to a supervisor'."
+  },
+  {
+   "affects": [
+    "REQ-002"
+   ],
+   "key": "ASM-010",
+   "text": "Skillset-based assignment is automatic and matches representatives' skills against the request's issue category."
+  },
+  {
+   "affects": [
+    "REQ-016",
+    "REQ-023"
+   ],
+   "key": "ASM-011",
+   "text": "A CSR's 'own cases' are requests assigned to that representative. A maintenance team member's 'own cases' are requests assigned to their maintenance team. 'Other users' means supervisors and managers."
+  },
+  {
+   "affects": [
+    "REQ-017"
+   ],
+   "key": "ASM-012",
+   "text": "Workload means the number of open requests currently assigned to each representative and each maintenance team, consistent with the assignment window used for resolution time."
+  },
+  {
+   "affects": [
+    "REQ-019"
+   ],
+   "key": "ASM-013",
+   "text": "Resolution time is defined per assignment period. A request that is reassigned therefore has one resolution-time measurement per assignee."
+  },
+  {
+   "affects": [
+    "REQ-014",
+    "REQ-002",
+    "REQ-012"
+   ],
+   "key": "ASM-014",
+   "text": "When a customer rates 1 or 2, the original request ends Closed immediately and the new linked request starts at New and follows normal assignment and escalation rules."
+  },
+  {
+   "affects": [
+    "REQ-013",
+    "REQ-014",
+    "REQ-020",
+    "REQ-030",
+    "REQ-031"
+   ],
+   "key": "ASM-015",
+   "text": "The satisfaction rating is captured when the customer responds to the resolution confirmation request. The rating is also the customer's answer on whether the issue is resolved; there is no separate yes/no confirmation."
+  },
+  {
+   "affects": [
+    "REQ-003",
+    "REQ-005",
+    "REQ-008",
+    "REQ-011",
+    "REQ-013",
+    "REQ-015",
+    "REQ-032"
+   ],
+   "key": "ASM-016",
+   "text": "'Notifications on portal' means in-portal notifications visible after login. Every customer notification, reminder and message is sent both by email and on the portal."
+  },
+  {
+   "affects": [
+    "REQ-013",
+    "REQ-014",
+    "REQ-031"
+   ],
+   "key": "ASM-017",
+   "text": "Because FB-2 states that 1 or 2 means unresolved, a rating of 3, 4 or 5 is treated as a 'satisfactory response' that confirms the request is resolved."
+  },
+  {
+   "affects": [
+    "REQ-031"
+   ],
+   "key": "ASM-018",
+   "text": "The 6 weeks for auto-close are calendar weeks, measured from the moment the customer sends the satisfactory response. The request stays in Resolved until it is auto-closed."
+  },
+  {
+   "affects": [
+    "REQ-002",
+    "REQ-003",
+    "REQ-005",
+    "REQ-006",
+    "REQ-007",
+    "REQ-008",
+    "REQ-011",
+    "REQ-012",
+    "REQ-013",
+    "REQ-014",
+    "REQ-015",
+    "REQ-017",
+    "REQ-018",
+    "REQ-019",
+    "REQ-020",
+    "REQ-022",
+    "REQ-023",
+    "REQ-028",
+    "REQ-030",
+    "REQ-031",
+    "REQ-032"
+   ],
+   "key": "ASM-019",
+   "text": "Answers given in the previous Gate 1 review round are carried forward as confirmed, although they are not in this round's feedback and so cannot be cited by FB id. They are, verbatim from the previous version: escalation timeframe '5 days for all requests'; 'always escalate request to a specific escalation team'; assignment 'based on the skillset of the user'; customer channels 'email and notifications on portal'; customer access 'through portal - autheticated login'; roles 'customer service representative, supervisor, manager, maintenance team member - CSR and MTM can edit only their cases and other users can view/edit any cases'; satisfaction via 'rating'; dissatisfaction handling 'create another request linked to already parent closed request'; 'auto close it after 6 weeks'; resolution time 'open request assigned date / time until it is reassigned to someone else or closed'. The approver should confirm these still stand."
+  }
+ ],
+ "conflicts": [],
+ "feedback_resolution": [
+  {
+   "feedback": "FB-1",
+   "resolution": "Confirmed that Q-019 and Q-020 are answered. Applied the answers in FB-2 and FB-3, and removed both questions from the open list. No blocking questions or conflicts remain, so readiness is READY. A residual non-blocking gap about customers who do not respond is raised as Q-025. Citations to previous-round feedback ids, which are not present in this round, have been removed. Those answers are recorded verbatim in ASM-019 for the approver to confirm."
+  },
+  {
+   "feedback": "FB-2",
+   "resolution": "Set the satisfaction rating scale to 1 to 5 in REQ-020 and REQ-030, and added a criterion rejecting out-of-range values. REQ-014 now creates a new linked request when the rating is 1 or 2, with a negative criterion for 3 to 5. REQ-013 now records ratings of 3 to 5 as confirmation and 1 or 2 as unresolved. ASM-015 is updated so the rating is also the resolution answer. Added ASM-017: ratings of 3 to 5 count as a satisfactory response."
+  },
+  {
+   "feedback": "FB-3",
+   "resolution": "REQ-031 is rewritten: a request is auto-closed 6 weeks after the customer sends a satisfactory response, with testable criteria that replace all previous <TBC> placeholders. The 6-week value is carried forward from the previous round (ASM-019). Added ASM-018: calendar weeks, measured from the response, with the request staying Resolved meanwhile. The no-response case and early closure or reopening are raised as non-blocking Q-025."
+  }
+ ],
+ "flags": [
+  {
+   "detail": "The request form and portal hold personal data (name, email address, phone number, property address) and supporting photos or documents that may show people or private premises. Privacy and retention requirements are not stated (see Q-017).",
+   "source_id": "SRC-1",
+   "type": "possible_pii"
+  },
+  {
+   "detail": "Client identity mismatch: the project context says 'Reel Estate property developers', while the source says 'We are a property maintenance company' (see Q-018).",
+   "source_id": "SRC-1",
+   "type": "other"
+  },
+  {
+   "detail": "A previous-round answer ('create another request linked to already parent closed request', see ASM-019) replaces the source's 'the request should be reopened' with creating a new request linked to the closed parent. This is treated as an authoritative clarification, not a conflict. The approver should confirm the departure is intended.",
+   "source_id": "SRC-1",
+   "type": "other"
+  },
+  {
+   "detail": "A previous-round answer ('always escalate request to a specific escalation team', see ASM-019) replaces the source's 'escalated to a supervisor' with escalation to a specific escalation team. This is treated as an authoritative clarification. The team's relationship to the supervisor role is open (Q-021).",
+   "source_id": "SRC-1",
+   "type": "other"
+  },
+  {
+   "detail": "Traceability gap. This round's feedback is numbered FB-1 to FB-3 and reuses ids from the previous round, so previous-round answers can no longer be cited by FB id. Citations to them have been removed from source_refs, and their content is recorded verbatim in ASM-019. Values that come from those answers (5 days, escalation team, skillset assignment, email and portal channels, authenticated portal login, the four roles, linked new request, 6 weeks, resolution-time window) now trace to ASM-019, not to a citation. The pipeline should give feedback ids unique numbers across rounds, or carry earlier feedback forward, so the Design agent can trace these values directly.",
+   "source_id": "FB-1",
+   "type": "other"
+  }
+ ],
+ "open_questions": [
+  {
+   "affects": [
+    "REQ-031",
+    "REQ-013",
+    "REQ-014"
+   ],
+   "blocking": false,
+   "key": "Q-025",
+   "options": [
+    "No auto-close without a response; a representative closes it manually",
+    "Auto-close a fixed period after confirmation was requested, even with no response"
+   ],
+   "question": "If the customer never responds to the resolution confirmation request, should the request be auto-closed, and if so after how long? Can a request be reopened or a new linked request be raised during the 6 weeks after a satisfactory response? Can employees close the request manually before the 6 weeks end?"
+  },
+  {
+   "affects": [
+    "REQ-012",
+    "REQ-023"
+   ],
+   "blocking": false,
+   "key": "Q-021",
+   "question": "Who belongs to the designated escalation team, and how is its membership maintained? Is it made up of supervisors? Does the original representative keep any involvement after escalation? Does the 5-day timer restart for a request created after dissatisfaction?"
+  },
+  {
+   "affects": [
+    "REQ-002"
+   ],
+   "blocking": false,
+   "key": "Q-022",
+   "question": "For skillset-based assignment: what happens when no representative has a matching skill, or when several do (e.g. workload balancing)? Who maintains representatives' skills?"
+  },
+  {
+   "affects": [
+    "REQ-023"
+   ],
+   "blocking": false,
+   "key": "Q-023",
+   "question": "Can customer service representatives and maintenance team members view (read-only) requests that are not theirs? Is there any administrator role beyond the four named roles?"
+  },
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-025",
+    "REQ-032"
+   ],
+   "blocking": false,
+   "key": "Q-024",
+   "question": "Must customers log in to submit a request on the website form? How are portal accounts created, for example by self-registration or by invitation after the first request?"
+  },
+  {
+   "affects": [
+    "REQ-009",
+    "REQ-027"
+   ],
+   "blocking": false,
+   "key": "Q-010",
+   "question": "Is the listed set of stages complete? What status transitions are allowed, and are any status changes automatic (e.g. to Awaiting Customer Information when information is requested)?"
+  },
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-007",
+    "REQ-026"
+   ],
+   "blocking": false,
+   "key": "Q-011",
+   "question": "Which form fields are mandatory? Which file types, sizes and number of attachments are permitted? What issue categories exist initially?"
+  },
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-015"
+   ],
+   "blocking": false,
+   "key": "Q-012",
+   "question": "Who schedules appointments, and is appointment scheduling itself in scope? The source mentions only a preferred appointment time and a notification when an appointment is scheduled."
+  },
+  {
+   "affects": [
+    "REQ-011"
+   ],
+   "blocking": false,
+   "key": "Q-013",
+   "question": "Are reminders sent manually by the representative only, or should they also be sent automatically? If automatic, at what interval and how many times?"
+  },
+  {
+   "affects": [
+    "REQ-025"
+   ],
+   "blocking": false,
+   "key": "Q-014",
+   "question": "How should employees match a new request to an existing customer and property (e.g. by email, phone or address)? What happens when a match is uncertain?"
+  },
+  {
+   "affects": [
+    "REQ-026",
+    "REQ-027",
+    "REQ-028",
+    "REQ-029"
+   ],
+   "blocking": false,
+   "key": "Q-015",
+   "question": "Who is allowed to change configuration (categories, statuses, escalation timeframes, notification rules)? What does 'without requiring major redevelopment' mean in practice, e.g. changes by an administrator with no code deployment?"
+  },
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-002",
+    "REQ-003",
+    "REQ-004",
+    "REQ-005",
+    "REQ-006",
+    "REQ-007",
+    "REQ-008",
+    "REQ-009",
+    "REQ-010",
+    "REQ-011",
+    "REQ-012",
+    "REQ-013",
+    "REQ-014",
+    "REQ-015",
+    "REQ-016",
+    "REQ-017",
+    "REQ-018",
+    "REQ-019",
+    "REQ-020",
+    "REQ-021",
+    "REQ-022",
+    "REQ-023",
+    "REQ-024",
+    "REQ-025",
+    "REQ-026",
+    "REQ-027",
+    "REQ-028",
+    "REQ-029",
+    "REQ-030",
+    "REQ-031",
+    "REQ-032"
+   ],
+   "blocking": false,
+   "key": "Q-016",
+   "question": "What priority (e.g. MoSCoW) applies to each requirement?"
+  },
+  {
+   "affects": [
+    "REQ-001",
+    "REQ-021",
+    "REQ-022",
+    "REQ-032"
+   ],
+   "blocking": false,
+   "key": "Q-017",
+   "question": "Are there privacy, data retention, accessibility, performance or volume requirements for the website form, the portal, and the personal data and photos collected?"
+  },
+  {
+   "affects": [],
+   "blocking": false,
+   "key": "Q-018",
+   "question": "The project context names the client as 'Reel Estate property developers', but the source describes 'a property maintenance company'. Which description is correct, and does the difference affect scope?"
+  }
+ ],
+ "out_of_scope": [],
+ "readiness": "READY",
+ "requirements": [
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer is on the maintenance request form on the company website",
+     "then": "a maintenance request is created that holds every value entered and the attached file",
+     "when": "the customer enters name, email address, phone number, property address, issue category, description of the problem and preferred appointment time, attaches a supporting photo or document, and submits the form"
+    },
+    {
+     "given": "A customer is on the maintenance request form",
+     "then": "the request is not created and the customer is told which field is missing",
+     "when": "the customer submits the form without a field that is mandatory per <TBC: mandatory fields>"
+    },
+    {
+     "given": "A customer is attaching a supporting file",
+     "then": "the file is rejected with a message explaining why",
+     "when": "the file breaks <TBC: permitted file types, size and count>"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Intake",
+   "key": "REQ-001",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Customers should be able to submit maintenance requests through an online form on our website."
+    },
+    {
+     "id": "SRC-1",
+     "quote": "Customers should be able to submit a maintenance request by providing their name, email address, phone number, property address, issue category, description of the problem, preferred appointment time, and supporting photos or documents."
+    }
+   ],
+   "statement": "Customer shall be able to submit a maintenance request through an online form on the company website, providing name, email address, phone number, property address, issue category, description of the problem, preferred appointment time, and supporting photos or documents.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "One customer service representative has a skillset matching a new request (per <TBC: skill matching rule>, assumed to be issue category) and another does not",
+     "then": "the request is assigned to the representative whose skillset matches",
+     "when": "the request is received"
+    },
+    {
+     "given": "A request has been assigned to a customer service representative",
+     "then": "the request appears in the representative's list",
+     "when": "that representative views their requests"
+    }
+   ],
+   "actor": "System",
+   "category": "Assignment",
+   "key": "REQ-002",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Once submitted, the company should receive the request and assign it to an appropriate customer service representative."
+    }
+   ],
+   "statement": "The system shall receive each submitted request and assign it to a customer service representative whose skillset is appropriate to the request.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A request is assigned to a representative",
+     "then": "all details and attachments submitted by the customer are displayed",
+     "when": "the representative opens the request"
+    },
+    {
+     "given": "A representative needs more information to process a request",
+     "then": "the customer receives the request for information by email and as a portal notification, and it is recorded in the request history",
+     "when": "the representative sends a request for information to the customer"
+    }
+   ],
+   "actor": "Customer service representative",
+   "category": "Triage",
+   "key": "REQ-003",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "The representative should review the request, contact the customer if additional information is required"
+    }
+   ],
+   "statement": "Customer service representative shall be able to review a request and contact the customer when additional information is required.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A representative is working a request",
+     "then": "the request shows the assigned maintenance team and the assignment is recorded in the request history",
+     "when": "the representative assigns the request to a maintenance team"
+    }
+   ],
+   "actor": "Customer service representative",
+   "category": "Assignment",
+   "key": "REQ-004",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "coordinate with the relevant maintenance team to resolve the issue."
+    },
+    {
+     "id": "SRC-1",
+     "quote": "They should be able to assign requests to maintenance teams"
+    }
+   ],
+   "statement": "Customer service representative shall be able to assign a request to a maintenance team.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer has completed the maintenance request form",
+     "then": "the customer receives an acknowledgement by email and an acknowledgement notification is shown on the portal",
+     "when": "the customer submits the request successfully"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Notifications",
+   "key": "REQ-005",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Customers should receive an acknowledgement after submitting a request"
+    },
+    {
+     "id": "SRC-1",
+     "quote": "Customers should receive notifications when their request is submitted"
+    }
+   ],
+   "statement": "The system shall send the customer an acknowledgement by email and as a portal notification when a request is submitted.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer has submitted a request and is logged in to the portal",
+     "then": "the request's current status is displayed",
+     "when": "the customer views the request"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Customer self-service",
+   "key": "REQ-006",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "be able to check its progress"
+    }
+   ],
+   "statement": "Customer shall be able to check the progress of their submitted requests through the customer portal after an authenticated login.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A representative has asked the customer a question about a request and the customer is logged in to the portal",
+     "then": "the response is attached to the request and visible to the assigned representative",
+     "when": "the customer submits a response"
+    },
+    {
+     "given": "A customer is logged in to the portal and has an existing request",
+     "then": "the document is attached to the request and visible to the assigned representative",
+     "when": "the customer uploads a supporting document to it"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Customer self-service",
+   "key": "REQ-007",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "They should also be able to respond to questions, provide additional information, upload supporting documents"
+    }
+   ],
+   "statement": "Customer shall be able to respond to questions, provide additional information and upload supporting documents on an existing request through the customer portal.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A request has an assigned representative and the customer is logged in to the portal",
+     "then": "the assigned representative can see the message on the request",
+     "when": "the customer sends a message on the request"
+    },
+    {
+     "given": "A request has an assigned representative",
+     "then": "the customer receives the message by email and as a portal notification, and it is recorded in the request history",
+     "when": "the representative sends a message to the customer"
+    }
+   ],
+   "actor": "Customer; Customer service representative",
+   "category": "Communication",
+   "key": "REQ-008",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "communicate with the assigned representative throughout the process."
+    },
+    {
+     "id": "SRC-1",
+     "quote": "and communicate with customers."
+    }
+   ],
+   "statement": "The system shall allow the customer and the assigned representative to exchange messages throughout the life of a request.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A request exists",
+     "then": "New, Under Review, Awaiting Customer Information, Assigned, In Progress, Resolved and Closed are available",
+     "when": "a representative views the available statuses"
+    },
+    {
+     "given": "A request is in one status",
+     "then": "the request shows the new status and the change is recorded in the request history",
+     "when": "the representative changes it to another status permitted by <TBC: allowed status transitions>"
+    }
+   ],
+   "actor": "Customer service representative",
+   "category": "Request lifecycle",
+   "key": "REQ-009",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Company representatives should be able to manage requests through different stages, such as New, Under Review, Awaiting Customer Information, Assigned, In Progress, Resolved, and Closed."
+    },
+    {
+     "id": "SRC-1",
+     "quote": "update the status"
+    }
+   ],
+   "statement": "Customer service representative shall be able to move a request through the stages New, Under Review, Awaiting Customer Information, Assigned, In Progress, Resolved and Closed by updating its status.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A representative is working a request",
+     "then": "the note is stored on the request and visible to employees with access to the request",
+     "when": "the representative saves an internal note"
+    },
+    {
+     "given": "An internal note exists on a request",
+     "then": "the internal note is not visible to the customer",
+     "when": "the customer views the request on the portal"
+    }
+   ],
+   "actor": "Customer service representative",
+   "category": "Request lifecycle",
+   "key": "REQ-010",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "record internal notes"
+    }
+   ],
+   "statement": "Customer service representative shall be able to record internal notes on a request.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A request is waiting for information the representative asked for and the customer has not supplied it",
+     "then": "the customer receives the reminder by email and as a portal notification, and the reminder is recorded in the request history",
+     "when": "the representative sends a reminder"
+    }
+   ],
+   "actor": "Customer service representative",
+   "category": "Follow-up",
+   "key": "REQ-011",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "If the customer does not provide the requested information, the representative should be able to send reminders."
+    }
+   ],
+   "statement": "Customer service representative shall be able to send reminders to a customer who has not provided requested information.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A request has not been resolved",
+     "then": "the request is escalated to the designated escalation team and the escalation is recorded in the request history",
+     "when": "5 days have elapsed since the request was submitted"
+    },
+    {
+     "given": "A request is resolved before 5 days have elapsed since it was submitted",
+     "then": "no escalation occurs",
+     "when": "the 5 days would have elapsed"
+    },
+    {
+     "given": "Any request, regardless of issue category",
+     "then": "it is escalated to the same designated escalation team",
+     "when": "it remains unresolved for more than 5 days"
+    }
+   ],
+   "actor": "System; Escalation team",
+   "category": "Escalation",
+   "key": "REQ-012",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "If a request remains unresolved beyond the expected timeframe, it should be escalated to a supervisor."
+    }
+   ],
+   "statement": "The system shall escalate a request to the designated escalation team when it remains unresolved for more than 5 days.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "Maintenance work on a request is complete",
+     "then": "the customer receives a completion message by email and as a portal notification asking them to confirm the issue is resolved, and the message is recorded in the request history",
+     "when": "the representative informs the customer"
+    },
+    {
+     "given": "A customer has received a request for confirmation",
+     "then": "the response is recorded on the request as a satisfactory response confirming the issue is resolved",
+     "when": "the customer submits a satisfaction rating of 3, 4 or 5 on the portal"
+    },
+    {
+     "given": "A customer has received a request for confirmation",
+     "then": "the response is recorded on the request as indicating the issue is unresolved",
+     "when": "the customer submits a satisfaction rating of 1 or 2 on the portal"
+    }
+   ],
+   "actor": "Customer service representative",
+   "category": "Resolution",
+   "key": "REQ-013",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "When the maintenance work is completed, the representative should inform the customer and request confirmation that the issue has been resolved."
+    },
+    {
+     "id": "FB-2",
+     "quote": "1 to 5"
+    },
+    {
+     "id": "FB-2",
+     "quote": "1 or 2 means unresolved"
+    }
+   ],
+   "statement": "Customer service representative shall be able to inform the customer that maintenance work is complete and request confirmation that the issue has been resolved.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer has been asked to confirm resolution of a request",
+     "then": "the original request is closed, a new request is created and linked to it as its parent, and both request histories record the link",
+     "when": "the customer submits a satisfaction rating of 1 or 2"
+    },
+    {
+     "given": "A customer has been asked to confirm resolution of a request",
+     "then": "no new linked request is created",
+     "when": "the customer submits a satisfaction rating of 3, 4 or 5"
+    },
+    {
+     "given": "A new request has been created from a rating of 1 or 2",
+     "then": "the link to the parent closed request is shown",
+     "when": "an employee or the customer views the new request"
+    }
+   ],
+   "actor": "Customer; System",
+   "category": "Resolution",
+   "key": "REQ-014",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "If the customer is not satisfied, the request should be reopened for further investigation."
+    },
+    {
+     "id": "FB-2",
+     "quote": "1 or 2 means unresolved"
+    }
+   ],
+   "statement": "The system shall create a new request, linked to the original closed request as its parent, for further investigation when the customer submits a satisfaction rating of 1 or 2.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer has a request",
+     "then": "the customer receives a notification by email and on the portal",
+     "when": "the request's status changes"
+    },
+    {
+     "given": "A customer has a request",
+     "then": "the customer receives a notification by email and on the portal",
+     "when": "a representative records that additional information is required"
+    },
+    {
+     "given": "A customer has a request",
+     "then": "the customer receives a notification by email and on the portal",
+     "when": "an appointment is scheduled for the request"
+    },
+    {
+     "given": "A customer has a request",
+     "then": "the customer receives a notification by email and on the portal",
+     "when": "the request is resolved"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Notifications",
+   "key": "REQ-015",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Customers should receive notifications when their request is submitted, its status changes, additional information is required, an appointment is scheduled, or the request is resolved."
+    }
+   ],
+   "statement": "The system shall notify the customer by email and on the portal when their request's status changes, additional information is required, an appointment is scheduled, or the request is resolved.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "Requests exist across several representatives and maintenance teams",
+     "then": "every request is visible to the manager",
+     "when": "a manager views requests"
+    }
+   ],
+   "actor": "Company manager",
+   "category": "Management visibility",
+   "key": "REQ-016",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Company managers should be able to view all requests"
+    }
+   ],
+   "statement": "Company manager shall be able to view all requests.",
+   "status": "Active",
+   "type": "Reporting"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "Open requests are assigned to customer service representatives and maintenance teams",
+     "then": "the manager sees the number of open requests currently assigned to each representative and each maintenance team",
+     "when": "a manager views workload information"
+    },
+    {
+     "given": "A request is reassigned from one representative to another",
+     "then": "the request is counted only against the new assignee",
+     "when": "the manager views workload information"
+    }
+   ],
+   "actor": "Company manager",
+   "category": "Management visibility",
+   "key": "REQ-017",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "monitor workloads"
+    }
+   ],
+   "statement": "Company manager shall be able to monitor workloads.",
+   "status": "Active",
+   "type": "Reporting"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "Some requests have been unresolved for more than 5 days since submission and others have not",
+     "then": "exactly the requests unresolved for more than 5 days are identified as overdue",
+     "when": "a manager looks for overdue requests"
+    }
+   ],
+   "actor": "Company manager",
+   "category": "Management visibility",
+   "key": "REQ-018",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "identify overdue requests"
+    }
+   ],
+   "statement": "Company manager shall be able to identify overdue requests, being those unresolved for more than 5 days.",
+   "status": "Active",
+   "type": "Reporting"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A request was assigned to an assignee and later closed without reassignment",
+     "then": "the resolution time shown is the elapsed time from the assignment date/time to the close date/time",
+     "when": "a manager views resolution times"
+    },
+    {
+     "given": "A request was assigned to one assignee and later reassigned to someone else",
+     "then": "the first assignee's resolution time is the elapsed time from their assignment date/time to the reassignment date/time, and a new measurement starts for the new assignee",
+     "when": "a manager views resolution times"
+    }
+   ],
+   "actor": "Company manager",
+   "category": "Management visibility",
+   "key": "REQ-019",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "track resolution times"
+    }
+   ],
+   "statement": "Company manager shall be able to track resolution times, measured from the date and time a request is assigned until it is reassigned to someone else or closed.",
+   "status": "Active",
+   "type": "Reporting"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "Customers have submitted satisfaction ratings on a scale of 1 to 5",
+     "then": "the manager sees the rating submitted for each rated request",
+     "when": "a manager reviews customer satisfaction"
+    }
+   ],
+   "actor": "Company manager",
+   "category": "Management visibility",
+   "key": "REQ-020",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "review customer satisfaction"
+    },
+    {
+     "id": "FB-2",
+     "quote": "1 to 5"
+    }
+   ],
+   "statement": "Company manager shall be able to review customer satisfaction ratings given on a scale of 1 to 5.",
+   "status": "Active",
+   "type": "Reporting"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A request has had a status change, an assignment change, a customer message and a resolution activity",
+     "then": "each event is listed with when it happened and who performed it",
+     "when": "an authorised employee views the request history"
+    }
+   ],
+   "actor": "System",
+   "category": "Audit",
+   "key": "REQ-021",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "The system should maintain a history of customer interactions, status changes, assignments, and resolution activities."
+    }
+   ],
+   "statement": "The system shall maintain a history of customer interactions, status changes, assignments and resolution activities for each request.",
+   "status": "Active",
+   "type": "NonFunctional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "Customer A and Customer B each have requests",
+     "then": "only Customer A's requests are available and Customer B's requests cannot be viewed or changed",
+     "when": "Customer A logs in to the portal"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Security",
+   "key": "REQ-022",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Customers should only be able to access their own requests"
+    }
+   ],
+   "statement": "The system shall restrict each customer to accessing only their own requests.",
+   "status": "Active",
+   "type": "NonFunctional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer service representative is logged in",
+     "then": "the edit to their own request is saved and the edit to the other representative's request is prevented",
+     "when": "the representative attempts to edit a request assigned to them and then a request assigned to another representative"
+    },
+    {
+     "given": "A maintenance team member is logged in",
+     "then": "the edit to their team's request is saved and the edit to the other team's request is prevented",
+     "when": "the member attempts to edit a request assigned to their maintenance team and then a request assigned to another maintenance team"
+    },
+    {
+     "given": "A supervisor or manager is logged in",
+     "then": "the request is viewable and the edit is saved",
+     "when": "they open and edit any request"
+    }
+   ],
+   "actor": "Company employee",
+   "category": "Security",
+   "key": "REQ-023",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "while company employees should have access based on their roles and responsibilities."
+    }
+   ],
+   "statement": "The system shall give company employees access to requests based on their roles, where customer service representatives and maintenance team members can edit only their own requests and supervisors and managers can view and edit any request.",
+   "status": "Active",
+   "type": "NonFunctional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer is associated with two properties",
+     "then": "both requests are linked to the same customer, each with its own property",
+     "when": "the customer submits a request for each property"
+    },
+    {
+     "given": "A customer has an open request for a property",
+     "then": "both requests exist separately and are linked to the same customer and property",
+     "when": "the customer submits another request for the same property"
+    }
+   ],
+   "actor": "System",
+   "category": "Customer and property",
+   "key": "REQ-024",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "The solution should support multiple properties and multiple maintenance requests for the same customer."
+    }
+   ],
+   "statement": "The system shall support multiple properties and multiple maintenance requests for the same customer.",
+   "status": "Active",
+   "type": "Data"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer and property already exist and a new request is received from them",
+     "then": "the employee can find the existing customer and property using <TBC: matching criteria> and link the request to them",
+     "when": "an employee processes the new request"
+    }
+   ],
+   "actor": "Company employee",
+   "category": "Customer and property",
+   "key": "REQ-025",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "It should also allow company employees to identify existing customers and properties when processing new requests."
+    }
+   ],
+   "statement": "Company employee shall be able to identify existing customers and properties when processing a new request.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "An authorised user is configuring the system",
+     "then": "the new category is available as an issue category on the online request form",
+     "when": "the user adds a new maintenance category in the way defined by <TBC: meaning of 'without major redevelopment'>"
+    }
+   ],
+   "actor": "<TBC: configuring role>",
+   "category": "Configurability",
+   "key": "REQ-026",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "The system should be configurable so that the company can add new maintenance categories"
+    },
+    {
+     "id": "SRC-1",
+     "quote": "without requiring major redevelopment"
+    }
+   ],
+   "statement": "The system shall allow the company to add new maintenance categories without requiring major redevelopment.",
+   "status": "Active",
+   "type": "NonFunctional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "An authorised user is configuring the system",
+     "then": "representatives see the modified statuses when updating requests",
+     "when": "the user modifies the set of request statuses in the way defined by <TBC: meaning of 'without major redevelopment'>"
+    }
+   ],
+   "actor": "<TBC: configuring role>",
+   "category": "Configurability",
+   "key": "REQ-027",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "modify request statuses"
+    },
+    {
+     "id": "SRC-1",
+     "quote": "without requiring major redevelopment"
+    }
+   ],
+   "statement": "The system shall allow the company to modify request statuses without requiring major redevelopment.",
+   "status": "Active",
+   "type": "NonFunctional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "An authorised user changes the escalation timeframe from 5 days to a new value in the way defined by <TBC: meaning of 'without major redevelopment'>",
+     "then": "the request is escalated to the designated escalation team based on the new value",
+     "when": "an unresolved request exceeds the new value"
+    }
+   ],
+   "actor": "<TBC: configuring role>",
+   "category": "Configurability",
+   "key": "REQ-028",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "change escalation timeframes"
+    },
+    {
+     "id": "SRC-1",
+     "quote": "without requiring major redevelopment"
+    }
+   ],
+   "statement": "The system shall allow the company to change escalation timeframes without requiring major redevelopment.",
+   "status": "Active",
+   "type": "NonFunctional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "An authorised user updates a notification rule in the way defined by <TBC: meaning of 'without major redevelopment'>",
+     "then": "customer notifications follow the updated rule",
+     "when": "the event covered by that rule next occurs"
+    }
+   ],
+   "actor": "<TBC: configuring role>",
+   "category": "Configurability",
+   "key": "REQ-029",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "update notification rules"
+    },
+    {
+     "id": "SRC-1",
+     "quote": "without requiring major redevelopment"
+    }
+   ],
+   "statement": "The system shall allow the company to update notification rules without requiring major redevelopment.",
+   "status": "Active",
+   "type": "NonFunctional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer is logged in to the portal and has been asked to confirm resolution of a request",
+     "then": "the rating is stored on the request and is available to managers",
+     "when": "the customer submits a rating between 1 and 5"
+    },
+    {
+     "given": "A customer is submitting a satisfaction rating",
+     "then": "the rating is not accepted",
+     "when": "the customer attempts to submit a value outside 1 to 5"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Satisfaction",
+   "key": "REQ-030",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "review customer satisfaction"
+    },
+    {
+     "id": "FB-2",
+     "quote": "1 to 5"
+    }
+   ],
+   "statement": "Customer shall be able to submit a satisfaction rating for their request on a scale of 1 to 5.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer has submitted a satisfactory response (rating of 3, 4 or 5) to the resolution confirmation request",
+     "then": "the request is closed automatically and the closure is recorded in the request history",
+     "when": "6 weeks have elapsed since that response was sent"
+    },
+    {
+     "given": "A customer has submitted a satisfactory response to the resolution confirmation request",
+     "then": "the request has not been closed automatically",
+     "when": "fewer than 6 weeks have elapsed since that response was sent"
+    },
+    {
+     "given": "A customer has been asked to confirm resolution of a request",
+     "then": "the 6-week auto-close does not apply and the request is handled as in REQ-014",
+     "when": "the customer submits a rating of 1 or 2"
+    }
+   ],
+   "actor": "System",
+   "category": "Resolution",
+   "key": "REQ-031",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "FB-3",
+     "quote": "auto close after the response has been sent as satisfactory response for resolving the request"
+    },
+    {
+     "id": "FB-2",
+     "quote": "1 or 2 means unresolved"
+    }
+   ],
+   "statement": "The system shall automatically close a request 6 weeks after the customer sends a satisfactory response confirming the request is resolved.",
+   "status": "Active",
+   "type": "Functional"
+  },
+  {
+   "acceptance_criteria": [
+    {
+     "given": "A customer has valid portal credentials",
+     "then": "the customer can see their requests and portal notifications",
+     "when": "the customer logs in to the portal"
+    },
+    {
+     "given": "A person is not logged in to the portal",
+     "then": "access is denied and they are asked to log in",
+     "when": "they attempt to view a request on the portal"
+    }
+   ],
+   "actor": "Customer",
+   "category": "Security",
+   "key": "REQ-032",
+   "priority": "Unstated",
+   "source_refs": [
+    {
+     "id": "SRC-1",
+     "quote": "Customers should only be able to access their own requests"
+    },
+    {
+     "id": "SRC-1",
+     "quote": "be able to check its progress"
+    }
+   ],
+   "statement": "Customer shall be able to access their requests only through the customer portal after an authenticated login.",
+   "status": "Active",
+   "type": "NonFunctional"
+  }
+ ],
+ "summary": "The client wants to manage residential property maintenance and repair requests from submission to closure. Customers (property owners and tenants) submit requests through an online website form. They then use an authenticated portal to track progress, respond, upload documents, communicate, and rate the outcome on a 1 to 5 scale, where 1 or 2 means the issue is unresolved. Requests are assigned to customer service representatives by skillset and coordinated with maintenance teams. Requests unresolved after 5 days are escalated to a specific escalation team, and requests are closed automatically 6 weeks after a satisfactory response. Managers need visibility of workload, overdue requests, resolution times and satisfaction ratings, with role-based access, a full interaction history, and configurable categories, statuses, escalation timeframes and notification rules."
+}

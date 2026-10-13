@@ -1,0 +1,57 @@
+<template>
+    <div class="intake">
+        <template lwc:if={submitted}>
+            <div class="confirmation" role="status" aria-live="polite">
+                <h2 class="slds-text-heading_medium">Thank you, your request has been received</h2>
+                <p class="slds-m-top_small">Your reference number is <strong class="reference">{reference}</strong>.</p>
+                <p class="slds-m-top_small">We have emailed you a confirmation. A customer service representative will be in touch.</p>
+                <lightning-button class="slds-m-top_medium" label="Submit another request" onclick={handleReset}></lightning-button>
+            </div>
+        </template>
+        <template lwc:else>
+            <h2 class="slds-text-heading_medium">Request maintenance</h2>
+            <p class="slds-m-bottom_medium slds-text-color_weak">Fields marked * are required.</p>
+            <div class="summary slds-text-color_error" aria-live="assertive" role="alert">{errorSummary}</div>
+            <template lwc:if={loading}><lightning-spinner alternative-text="Loading"></lightning-spinner></template>
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input data-field="name" label="Full name" required={req.name} value={form.name} onchange={handleChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input data-field="email" type="email" label="Email" required={req.email} value={form.email} onchange={handleChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input data-field="phone" type="tel" label="Phone" required={req.phone} value={form.phone} onchange={handleChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-combobox data-field="category" label="Issue category" required={req.category} value={form.category}
+                        options={categories} placeholder="Select a category" onchange={handleChange}></lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-input data-field="street" label="Property street address" required={req.street} value={form.street} onchange={handleChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input data-field="city" label="Suburb or city" required={req.city} value={form.city} onchange={handleChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input data-field="postalCode" label="Postcode" required={req.postalCode} value={form.postalCode} onchange={handleChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-textarea data-field="description" label="Describe the problem" required={req.description} value={form.description} onchange={handleChange}></lightning-textarea>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                    <lightning-input data-field="preferredAppointment" type="datetime" label="Preferred appointment time" required={req.preferredAppointment}
+                        value={form.preferredAppointment} onchange={handleChange}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1">
+                    <lightning-input data-field="files" type="file" label={fileLabel} accept={accept} multiple onchange={handleFiles}></lightning-input>
+                    <template lwc:if={fileError}><p class="file-error slds-text-color_error" role="alert">{fileError}</p></template>
+                    <ul class="file-list">
+                        <template for:each={files} for:item="f"><li key={f.fileName}>{f.fileName}</li></template>
+                    </ul>
+                </div>
+            </div>
+            <lightning-button class="submit slds-m-top_medium" variant="brand" label="Submit request" onclick={handleSubmit} disabled={loading}></lightning-button>
+        </template>
+    </div>
+</template>

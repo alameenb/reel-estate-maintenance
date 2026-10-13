@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Resolution_Outcome__c</fullName><label>Resolution Outcome</label><formula>IF(ISBLANK(Satisfaction_Rating__c), '', IF(Satisfaction_Rating__c &gt;= 3, 'Satisfactory - Resolved', 'Unresolved'))</formula><formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs><type>Text</type><unique>false</unique></CustomField>

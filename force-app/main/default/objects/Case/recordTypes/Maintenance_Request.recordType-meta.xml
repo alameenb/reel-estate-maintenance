@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+  <fullName>Maintenance_Request</fullName>
+  <active>true</active>
+  <businessProcess>Maintenance_Request_Process</businessProcess>
+  <description>Customer maintenance request (Reel Estate).</description>
+  <label>Maintenance Request</label>
+  <picklistValues><picklist>Issue_Category__c</picklist><values><fullName>Plumbing</fullName><default>false</default></values><values><fullName>Electrical</fullName><default>false</default></values><values><fullName>Heating_Cooling</fullName><default>false</default></values><values><fullName>Appliances</fullName><default>false</default></values><values><fullName>Structural</fullName><default>false</default></values><values><fullName>Pest_Control</fullName><default>false</default></values><values><fullName>General</fullName><default>false</default></values></picklistValues>
+  <picklistValues><picklist>Maintenance_Team__c</picklist><values><fullName>Plumbing_Team</fullName><default>false</default></values><values><fullName>Electrical_Team</fullName><default>false</default></values><values><fullName>General_Maintenance</fullName><default>false</default></values></picklistValues>
+</RecordType>

@@ -1,0 +1,12 @@
+{
+  "activeViewId": "a0ab195a-3b44-581d-ba3c-18c914be8766",
+  "appPageId": "af757c3a-8203-43a2-84f6-396296cb5bac",
+  "configurationTags": [],
+  "devName": "Request_Maintenance",
+  "id": "54fb9df2-8ff2-5de6-84fc-b751705d5fbd",
+  "label": "Request Maintenance",
+  "pageAccess": "Public",
+  "routeType": "custom-request-maintenance",
+  "type": "route",
+  "urlPrefix": "request-maintenance"
+}

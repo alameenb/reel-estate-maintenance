@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata"><available>true</available><encodingKey>UTF-8</encodingKey><name>Maintenance Request Resolved</name><style>none</style><subject>Your maintenance request {!Case.CaseNumber} has been resolved</subject><textOnly>Hello {!Contact.FirstName},
+
+Your maintenance request {!Case.CaseNumber} has been resolved
+
+Request number: {!Case.CaseNumber}
+View your request: {!Case.Portal_Link__c}
+
+Reel Estate Customer Service</textOnly><type>custom</type><uiType>Aloha</uiType></EmailTemplate>

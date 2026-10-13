@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata"><active>true</active><entityName>Case</entityName><fieldName>Status</fieldName><masterLabel>Maintenance Request Path</masterLabel><recordTypeName>Maintenance_Request</recordTypeName>
+<pathAssistantSteps><fieldNames>Maintenance_Team__c</fieldNames><info>&lt;p&gt;Assign a maintenance team once the request is understood.&lt;/p&gt;</info><picklistValueName>Assigned</picklistValueName></pathAssistantSteps>
+<pathAssistantSteps><fieldNames>Appointment_DateTime__c</fieldNames><info>&lt;p&gt;Schedule the appointment; the customer is notified automatically.&lt;/p&gt;</info><picklistValueName>In Progress</picklistValueName></pathAssistantSteps>
+</PathAssistant>

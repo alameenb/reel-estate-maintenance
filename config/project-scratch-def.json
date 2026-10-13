@@ -1,0 +1,9 @@
+{
+  "orgName": "Reel Estate Maintenance Demo",
+  "edition": "Enterprise",
+  "features": ["Communities", "ServiceCloud", "OmniChannel"],
+  "settings": {
+    "communitiesSettings": { "enableNetworksEnabled": true },
+    "omniChannelSettings": { "enableOmniChannel": true, "enableOmniSkillsRouting": true }
+  }
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata"><available>true</available><encodingKey>UTF-8</encodingKey><name>Maintenance Information Reminder</name><style>none</style><subject>Reminder: information needed for request {!Case.CaseNumber}</subject><textOnly>Hello {!Contact.FirstName},
+
+Reminder: information needed for request {!Case.CaseNumber}
+
+Request number: {!Case.CaseNumber}
+View your request: {!Case.Portal_Link__c}
+
+Reel Estate Customer Service</textOnly><type>custom</type><uiType>Aloha</uiType></EmailTemplate>

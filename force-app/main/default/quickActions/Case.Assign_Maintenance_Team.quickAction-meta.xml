@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata"><label>Assign Maintenance Team</label><optionsCreateFeedItem>false</optionsCreateFeedItem>
+<quickActionLayout><layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle><quickActionLayoutColumns><quickActionLayoutItems><emptySpace>false</emptySpace><field>Maintenance_Team__c</field><uiBehavior>Required</uiBehavior></quickActionLayoutItems></quickActionLayoutColumns><quickActionLayoutColumns/></quickActionLayout>
+<successMessage>Maintenance team assigned</successMessage><type>Update</type></QuickAction>
