@@ -1,0 +1,7 @@
+node_modules/
+.sf/
+.sfdx/
+.localdevserver/
+coverage/
+*.log
+.DS_Store
