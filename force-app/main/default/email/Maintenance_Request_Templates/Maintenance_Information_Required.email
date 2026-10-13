@@ -1,0 +1,6 @@
+<html><body style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#1b1b1b">
+<p>Hello {!Contact.FirstName},</p>
+<p>We need some more information to progress your request. Please reply through the customer portal.</p>
+<p>Request number: <strong>{!Case.CaseNumber}</strong><br/>Category: {!Case.Issue_Category__c}</p>
+<p><a href="{!Case.Portal_Link__c}">View your request in the customer portal</a></p>
+<p>Reel Estate Customer Service</p></body></html>
