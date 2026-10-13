@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Maintenance_Requests</fullName><doesSendEmailToMembers>false</doesSendEmailToMembers><name>Maintenance Requests (Unrouted)</name><queueSobject><sobjectType>Case</sobjectType></queueSobject></Queue>
