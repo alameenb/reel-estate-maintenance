@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Is_Overdue__c</fullName><inlineHelpText>Unresolved more than 5 days after submission.</inlineHelpText><label>Overdue</label><formula>AND(NOT(ISBLANK(Escalation_Due__c)), NOW() &gt; Escalation_Due__c, NOT(ISPICKVAL(Status, 'Resolved')), NOT(ISPICKVAL(Status, 'Closed')))</formula><formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs><type>Checkbox</type></CustomField>

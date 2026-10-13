@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata"><fullName>Appointment_DateTime__c</fullName><inlineHelpText>Date and time of the scheduled maintenance appointment.</inlineHelpText><label>Appointment Date/Time</label><trackHistory>true</trackHistory><required>false</required><type>DateTime</type></CustomField>
